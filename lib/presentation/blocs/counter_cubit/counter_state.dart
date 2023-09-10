@@ -1,11 +1,11 @@
 part of 'counter_cubit.dart';
 
-class CounterState {
+class CounterState extends Equatable {
   final int counter;
   final int transactionCount;
 
   //Estado inicial
-  CounterState({ 
+  const CounterState({ 
     this.counter =0, 
     this.transactionCount =0
   });
@@ -17,5 +17,9 @@ copyWith({
   counter: counter ?? this.counter,
   transactionCount: transactionCount ?? this.transactionCount
 );
+
+//Campos a considerar si dos objetos son iguales
+  @override
+  List<Object> get props => [counter, transactionCount];
 
 }
