@@ -23,9 +23,9 @@ class _CubitCounterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
+
         //Número de transacciones:
         title: context.select((CounterCubit value) {
           return Text("Cubit Counter: ${value.state.transactionCount} ");
